@@ -6,11 +6,16 @@
 
 > 单行日常领用请用多维表格原生「按钮」字段 + 自动化；本插件对齐「表内勾选 + 助手批量操作」。
 
+## 协作策略
+
+**本仓库不接受外部修改。** 不接收 Pull Request / Issue 协作；来件 PR 会被自动关闭。详见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。  
+需要定制请自行 fork 到自己的账号维护。
+
 ## 安全
 
 - 仓库内**无** Token、密钥、Base 链接、内网地址。  
 - 运行时仅通过官方 JS SDK 访问用户当前打开的多维表格。  
-- 请勿在 Issue / README / 截图中粘贴 Personal Base Token 或未脱敏的业务数据。
+- 请勿在 README / 截图中粘贴 Personal Base Token 或未脱敏的业务数据。
 
 ## 功能
 
@@ -20,23 +25,21 @@
 4. **跨站查货**：按名称+规格看各站可用量，一键填入调拨  
 5. **调拨申请 / 审计 / 权限**：申请草稿与只读预览  
 
+演示数据（虚构）：[`docs/DEMO-TEMPLATE.md`](docs/DEMO-TEMPLATE.md) · [`demo/`](demo/)
+
 ## 本地开发
 
 ```bash
 npm install
-npm run dev    # http://localhost:5176
-npm run build  # 产物 dist/，base 为相对路径 ./
+npm run dev
+npm run build
 ```
 
 在多维表格 → 插件 → 自定义插件中，将服务地址指向本地或你自己托管的 `dist/`（URL 末尾保留 `/`）。
 
 ## 表结构约定
 
-插件按**表名**查找（需与 Base 一致）：
-
-- 站点、站库存、入库流水、出库流水、调拨申请、人员站点权限、修改记录  
-
-详见 [`docs/OPS.md`](docs/OPS.md)。
+插件按**表名**查找（需与 Base 一致）：站点、站库存、入库流水、出库流水、调拨申请、人员站点权限、修改记录。详见 [`docs/OPS.md`](docs/OPS.md)。
 
 ## 技术栈
 
@@ -45,4 +48,4 @@ npm run build  # 产物 dist/，base 为相对路径 ./
 
 ## License
 
-MIT
+MIT（允许自行 fork 使用；上游不合并外部贡献）
