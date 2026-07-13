@@ -718,7 +718,7 @@ export default function App() {
       {tab === 'acl' ? (
         <section className="panel">
           <p className="hint">
-            在「人员站点权限」表维护人↔站；海能高级权限按站点行过滤后，站员只能改本站。本页只读预览。
+            在「人员站点权限」表维护人↔站；再用多维表格高级权限按站点行过滤后，站员只能改本站。本页只读预览。
           </p>
           <button type="button" className="secondary" onClick={() => void navigateToTable(TABLE.acl)}>
             打开权限表编辑
